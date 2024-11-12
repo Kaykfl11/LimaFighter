@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lima Fighter</title>
+  <link rel="stylesheet" href="cssbase.css">
+
+  <script src="https://unpkg.com/konva@9.3.16/konva.min.js"></script>
+    <link rel="stylesheet" href="styleper.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-image">
+      <a href="Homepage.html">
+        <img src="public/icones/logo inicial.jpg" alt="Logo Lima Fighter">
+      </a>
+    </div>
+  </header>
+
+
+  <!-- Main Content -->
+  <main>
+  
+
+    <div>
+      <h3>Upload de Imagem PNG</h3>
+      <input type="file" id="upload" accept="image/png">
+    </div>
+    <div id="container"></div>
+    <script>
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+      function update(activeAnchor) {
+        var group = activeAnchor.getParent();
+
+        var topLeft = group.findOne('.topLeft');
+        var topRight = group.findOne('.topRight');
+        var bottomRight = group.findOne('.bottomRight');
+        var bottomLeft = group.findOne('.bottomLeft');
+        var image = group.findOne('Image');
+
+        var anchorX = activeAnchor.x();
+        var anchorY = activeAnchor.y();
+
+        // update anchor positions
+        switch (activeAnchor.getName()) {
+          case 'topLeft':
+            topRight.y(anchorY);
+            bottomLeft.x(anchorX);
+            break;
+          case 'topRight':
+            topLeft.y(anchorY);
+            bottomRight.x(anchorX);
+            break;
+          case 'bottomRight':
+            bottomLeft.y(anchorY);
+            topRight.x(anchorX);
+            break;
+          case 'bottomLeft':
+            bottomRight.y(anchorY);
+            topLeft.x(anchorX);
+            break;
+        }
+
+        image.position(topLeft.position());
+
+        var width = topRight.x() - topLeft.x();
+        var height = bottomLeft.y() - topLeft.y();
+        if (width && height) {
+          image.width(width);
+          image.height(height);
+        }
+      }
+      
+      function addAnchor(group, x, y, name) {
+        var stage = group.getStage();
+        var layer = group.getLayer();
+
+        var anchor = new Konva.Circle({
+          x: x,
+          y: y,
+          stroke: '#666',
+          fill: '#ddd',
+          strokeWidth: 2,
+          radius: 8,
+          name: name,
+          draggable: true,
+          dragOnTop: false,
+        });
+
+        anchor.on('dragmove', function () {
+          update(this);
+        });
+        anchor.on('mousedown touchstart', function () {
+          group.draggable(false);
+          this.moveToTop();
+        });
+        anchor.on('dragend', function () {
+          group.draggable(true);
+        });
+        anchor.on('mouseover', function () {
+          document.body.style.cursor = 'pointer';
+          this.strokeWidth(4);
+        });
+        anchor.on('mouseout', function () {
+          document.body.style.cursor = 'default';
+          this.strokeWidth(2);
+        });
+
+        group.add(anchor);
+      }
+
+      var stage = new Konva.Stage({
+        container: 'container',
+        width: width,
+        height: height,
+      });
+
+      var layer = new Konva.Layer();
+      stage.add(layer);
+
+      // darth vader
+      var darthVaderImg = new Konva.Image({
+        width: 200,
+        height: 137,
+      });
+
+      // yoda
+      var yodaImg = new Konva.Image({
+        width: 93,
+        height: 104,
+      });
+
+      var darthVaderGroup = new Konva.Group({
+        x: 180,
+        y: 50,
+        draggable: true,
+      });
+      layer.add(darthVaderGroup);
+      darthVaderGroup.add(darthVaderImg);
+      addAnchor(darthVaderGroup, 0, 0, 'topLeft');
+      addAnchor(darthVaderGroup, 200, 0, 'topRight');
+      addAnchor(darthVaderGroup, 200, 138, 'bottomRight');
+      addAnchor(darthVaderGroup, 0, 138, 'bottomLeft');
+
+      var yodaGroup = new Konva.Group({
+        x: 20,
+        y: 110,
+        draggable: true,
+      });
+      layer.add(yodaGroup);
+      yodaGroup.add(yodaImg);
+      addAnchor(yodaGroup, 0, 0, 'topLeft');
+      addAnchor(yodaGroup, 93, 0, 'topRight');
+      addAnchor(yodaGroup, 93, 104, 'bottomRight');
+      addAnchor(yodaGroup, 0, 104, 'bottomLeft');
+
+      var imageObj1 = new Image();
+      imageObj1.onload = function () {
+        darthVaderImg.image(imageObj1);
+        layer.draw();
+      };
+      imageObj1.src = '/public/uploads/luva Base certa.jpg';
+
+      var imageObj2 = new Image();
+      imageObj2.onload = function () {
+        yodaImg.image(imageObj2);
+        layer.draw();
+      };
+      imageObj2.src = '/public/uploads/ap base.jpg';
+      
+
+      // Função de upload de imagem
+      document.getElementById('upload').addEventListener('change', function (e) {
+        var file = e.target.files[0];
+        if (file && file.type === 'image/png') {
+          var reader = new FileReader();
+          reader.onload = function (event) {
+            var uploadedImage = new Image();
+            uploadedImage.onload = function () {
+              // Criar um novo grupo para a imagem carregada
+              var userImage = new Konva.Image({
+                image: uploadedImage,
+                x: 50,
+                y: 50,
+                width: 150,
+                height: 150,
+              });
+
+              var userGroup = new Konva.Group({
+                x: 50,
+                y: 50,
+                draggable: true,
+              });
+
+              userGroup.add(userImage);
+              layer.add(userGroup);
+              
+              addAnchor(userGroup, 0, 0, 'topLeft');
+              addAnchor(userGroup, 150, 0, 'topRight');
+              addAnchor(userGroup, 150, 150, 'bottomRight');
+              addAnchor(userGroup, 0, 150, 'bottomLeft');
+              
+              layer.draw();
+            };
+            uploadedImage.src = event.target.result;
+          };
+          reader.readAsDataURL(file);
+        } else {
+          alert("Por favor, envie uma imagem no formato PNG.");
+        }
+      });
+    </script>
+      
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <p>&copy; 2024 Lima Fighter. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="personalizado.js"></script>
+</body>
+</html>

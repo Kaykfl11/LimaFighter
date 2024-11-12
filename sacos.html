@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lima Fighter</title>
+  <link rel="stylesheet" href="cssbase.css">
+  <link rel="stylesheet" href="aparadores.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-image">
+     <a href="Homepage.html">
+        <img src="public/icones/logo inicial.jpg" alt="Logo Lima Fighter">
+      </a>
+    </div>
+    <div class="top-bar">
+        <div class="account-container">
+            <img src="public/icones/account.png" alt="Conta" class="icon account-icon">
+            <div class="dropdown-menu">
+              <a href="/indexlogin.html">Login</a>
+              <a href="/indexregistro.html">Cadastro</a>
+            </div>
+          </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Pesquise um produto, uma cor, uma coleção...">
+            <img src="public/icones/Lupa.png" class="search-icon" width="40px" height="40px">
+          </div>
+        <img src="public/icones/carrinho.jpg" alt="Carrinho" class="icon cart-icon">
+        <div id="notification" class="notification">+1 item adicionado ao carrinho</div>
+
+<!-- Contêiner para mostrar os itens do carrinho ao passar o mouse -->
+<div id="cart-items-list" class="cart-items-list"></div>
+      </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+        <ul class="sidebar-categorias">
+            <li><a href="aparadores.html">Aparadores de Chute</a></li>
+            <li><a href="bolsas.html">Bolsas de Treino</a></li>
+            <li><a href="caneleiras.html">Caneleiras</a></li>
+            <li><a href="kits.html">Kits</a></li>
+            <li><a href="luvas.html">Luvas</a></li>
+            <li><a href="manoplas.html">Manoplas</a></li>
+            <li><a href="protetores.html">Protetores</a></li>
+            <li><a href="Raquetes.html">Raquetes</a></li>
+            <li><a href="sacos.html">Sacos de Pancada</a></li>
+            <li><a href="patrocinio.html">Patrocínio</a></li>
+            <li><a href="personalizado.html">Personalização</a></li>
+        </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+
+    <section id="aparadores-chute">
+      <h2>Sacos de Pancada</h2>
+      <div class="filtros">
+          <label for="filtro-preco">Filtrar por Preço:</label>
+          <select id="filtro-preco">
+              <option value="todos">Todos</option>
+              <option value="baixo">Até R$ 150</option>
+              <option value="medio">R$ 150 Até R$ 250</option>
+              <option value="alto">Acima de R$ 250</option>
+          </select>
+      </div>
+      <div class="kit-grid">
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (1).jpg" alt="Aparador 1">
+              <h3>Saco de Pancada Infantil Cheio</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco. Possui 47 cm de altura e 60 cm de circunferência.</p>
+              <span class="preco">R$ 140,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador1')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (2).jpg" alt="Aparador 2">
+              <h3>Saco de Pancada Gota Cheio Azul</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco. Possui 65 cm de altura e 166 cm de circunferência.</p>
+              <span class="preco">R$ 294,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador2')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (3).jpg" alt="Aparador 3">
+              <h3>Saco de Pancada Gota Cheio Preto</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco. Possui 65 cm de altura e 166 cm de circunferência.</p>
+              <span class="preco">R$ 294,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador3')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="299.99">
+              <img src="public/imgs/sc (4).jpg" alt="ADICIONAR">
+              <h3>Saco de Pancada Gota Cheio Vermelho</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco. Possui 65 cm de altura e 166 cm de circunferência.</p>
+              <span class="preco">R$ 294,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador4')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (5).jpg" alt="Aparador 5">
+              <h3>Saco de Pancada Pera Cheio Preto</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco. Possui 100 cm de altura e 190 cm de circunferência.</p>
+              <span class="preco">R$ 385,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador5')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (6).jpg" alt="Aparador 6">
+              <h3>Saco de Pancada 120x100 cm Vazio Vermelho</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco.</p>
+              <span class="preco">R$ 239,89</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador6')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (7).jpg" alt="Aparador 7">
+              <h3>Saco de Pancada 120x100 cm Vazio Branco</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco.</p>
+              <span class="preco">R$ 239,89</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador7')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (8).jpg" alt="Aparador 8">
+              <h3>Saco de Pancada 150x100 cm Vazio Preto</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco.</p>
+              <span class="preco">R$ 261,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador8')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/sc (9).jpg" alt="Aparador 9">
+              <h3>Saco de Pancada 180x100 cm Vazio Preto</h3>
+              <p> É utilizado para melhorar o condicionamento físico e no aprimoramento de técnicas de chute e soco.</p>
+              <span class="preco">R$ 297,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador9')">Comprar</button>
+          </div>
+        
+          
+
+          
+          <script>
+              function abrirModal(aparador) {
+                  const modal = document.getElementById('modal');
+                  const titulo = document.getElementById('modal-titulo');
+                  const descricao = document.getElementById('modal-descricao');
+          
+                  switch (aparador) {
+                      case 'aparador1':
+                          titulo.textContent = 'Aparador Pro 3000';
+                          descricao.textContent = 'Ideal para treinos intensos, resistência e durabilidade.';
+                          break;
+                      case 'aparador2':
+                          titulo.textContent = 'Aparador Ultra Light';
+                          descricao.textContent = 'Leve e fácil de manusear, perfeito para iniciantes.';
+                          break;
+                      case 'aparador3':
+                          titulo.textContent = 'Aparador Max Grip';
+                          descricao.textContent = 'Com tecnologia de absorção de impacto, ideal para sparring.';
+                          break;
+                      case 'aparador4':
+                          titulo.textContent = 'Aparador Elite 5000';
+                          descricao.textContent = 'Alta performance para atletas profissionais.';
+                          break;
+                  }
+          
+                  modal.style.display = "block";
+              }
+          
+              function fecharModal() {
+                  document.getElementById('modal').style.display = "none";
+              }
+          
+              // Fecha o modal ao clicar fora dele
+              window.onclick = function(event) {
+                  const modal = document.getElementById('modal');
+                  if (event.target == modal) {
+                      fecharModal();
+                  }
+              }
+          
+
+              document.querySelectorAll('.estrela').forEach(star => {
+                  star.addEventListener('click', function() {
+                      const rating = this.getAttribute('data-valor');
+          
+                      
+                      document.querySelectorAll('.estrela').forEach(s => {
+                          s.classList.remove('ativa');
+                          if (s.getAttribute('data-valor') <= rating) {
+                              s.classList.add('ativa');
+                          }
+                      });
+          
+                      this.parentNode.querySelector('.nota').textContent = `Você avaliou com ${rating} estrela(s)`;
+                      this.parentNode.querySelector('.nota').style.display = 'block';
+                  });
+              });
+          </script>
+   
+      
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <p>&copy; 2024 Lima Fighter. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

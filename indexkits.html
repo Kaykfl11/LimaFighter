@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kits</title>
+    <link rel="stylesheet" href="stylekits.css">
+    <section id="Kits">
+        <h2>Kits</h2>
+        <div class="filtros">
+            <label for="filtro-preco">Filtrar por Preço:</label>
+            <select id="filtro-preco">
+                <option value="todos">Todos</option>
+                <option value="baixo">Até R$ 150</option>
+                <option value="medio">R$ 150 Até R$ 250</option>
+                <option value="alto">Acima de R$ 250</option>
+            </select>
+        </div>
+        <div class="kit-grid">
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit1.jpg" alt="kit 1">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Kit leve com proteção avançada para combate</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit1')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit2.jpg" alt="kit 2">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Leve e fácil de manusear, perfeito para iniciantes.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit 2')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit3.jpg" alt="kit 3">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Sistema de ventilação inteligente.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit 3')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit4.jpg" alt="kit 4">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Alta performance para atletas profissionais.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit 4')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit5.jpg" alt="kit 5">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Confortável e leve, ideal para treinos regulares.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit 5')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit6.jpg" alt="kit 6">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Para profissionais, resistência e durabilidade superiores.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit 6')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit7.jpg" alt="kit 7">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Design aerodinâmico para maior agilidade nos treinos.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit7')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit8.jpg" alt="kit 8">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Flexibilidade e conforto para treinos longos.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit 8')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit9.jpg" alt="kit 9">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Kit luta com reforço nas articulações.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit9')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit10.jpg" alt="kit 10">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Resistência e potência para treinos de alta intensidade.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit10')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit11.jpg" alt="kit 11">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Perfeito para sparring e treinos de combate.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit11')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit12.jpg" alt="kit 12">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Alta resistência para os treinos mais exigentes.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit12')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit13.jpg" alt="kit 13">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Design moderno e funcional para treinos.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit13')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit14.jpg" alt="kit 14">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Ótima opção para iniciantes.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit14')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit15.jpg" alt="kit 15">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Desenvolvido para suportar impactos fortes.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit15')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit16.jpg" alt="kit16">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Para treinos de alto nível, conforto e proteção.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit16')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit17.jpg" alt="kit17">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>kit leve para competições.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit17')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit18.jpg" alt="kit 18">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Modelo básico com boa relação custo-benefício.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit18')">Comprar</button>
+            </div>
+
+
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit19.jpg" alt="kit19">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>kit treino com proteção superior contra chutes.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit19')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit20.jpg" alt="kit 20">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Feito para treinos rápidos e dinâmicos.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit20')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit21.jpg" alt="kit 21">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Modelo que prioriza conforto e proteção.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit21')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit22.jpg" alt="kit 22">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Ideal para treinos focados em precisão.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit22')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit23.jpg" alt="kit 23">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Desempenho dinâmico para atletas avançados.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit23')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit24.jpg" alt="kit 24">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Para treinos com alta intensidade e potência.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit24')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit25.jpg" alt="kit 25">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>kit de luta com ajuste personalizado.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit25')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit26.jpg" alt="kit 26">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Perfeito para treino de golpes e resistência.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit26')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit27.jpg" alt="kit27">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Proteção ideal para treinos de impacto.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit27')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit28.jpg" alt="kit28">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Kit para treinos medianos.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit28')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit29.jpg" alt="kit29">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>kit para atletas profissionais.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit29')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/caneleira30.jpg" alt="kit 30">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Kit leve com ajuste de velcro.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit30')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit31.jpg" alt="kit31">
+                <h3>ADICIONAR NOME DE KITS</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>kit com reforço duplo nas áreas de maior impacto.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit31')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit32.jpg" alt="kit 32">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Kit espuma de alta densidade.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('kit32')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit33.jpg" alt="kit33">
+                <h3>ADICIONAR NOME DE KITS DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Kit perfeito para treinos.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('Kit33')">Comprar</button>
+            </div>
+            <div class="kit-item" data-preco="ADICIONAR">
+                <img src="imagens/kit34.jpg" alt="kit 34">
+                <h3>ADICIONAR NOME DE KIT DE TREINO</h3>
+                <p>FRETE GRÁTIS - SÃO PAULO</p>
+                <p>Kit de MMA em couro sintético.</p>
+                <span class="preco">R$ ADICIONAR</span>
+                <div class="avaliacoes">
+                    <span class="estrela" data-valor="1">★</span>
+                    <span class="estrela" data-valor="2">★</span>
+                    <span class="estrela" data-valor="3">★</span>
+                    <span class="estrela" data-valor="4">★</span>
+                    <span class="estrela" data-valor="5">★</span>
+                    <span class="nota" style="display: none;"></span>
+                </div>
+                <button onclick="abrirModal('Kit34')">Comprar</button>
+            </div>
+
+
+
+
+            
+            <script>
+document.querySelectorAll('.estrela').forEach(star => {
+star.addEventListener('click', function() {
+const rating = this.getAttribute('data-valor');
+            
+                        
+document.querySelectorAll('.estrela').forEach(s => {
+s.classList.remove('ativa');
+if (s.getAttribute('data-valor') <= rating) {
+s.classList.add('ativa');
+ }
+    });
+ this.parentNode.querySelector('.nota').textContent = `Você avaliou com ${rating} estrela(s)`;
+ this.parentNode.querySelector('.nota').style.display = 'block';
+ });
+});
+</script>
+            
+    
+</head>
+<body>
+    
+</body>
+</html>v

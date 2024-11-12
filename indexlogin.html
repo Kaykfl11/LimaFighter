@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login e Registro</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        
+        <select id="userType">
+            <option value="cliente">Cliente</option>
+            <option value="admin">Administrador</option>
+        </select>
+        
+        <button onclick="login()">Entrar</button>
+        <p class="error-message" id="error-message"></p>
+        
+        <p>Não tem uma conta? <a href="/indexregistro.html" onclick="showRegister()">Registre-se</a></p>
+    </div>
+
+    <div class="register-container" style="display: none;">
+        <h2>Registrar-se</h2>
+        <input type="text" id="newUsername" placeholder="Usuário" required>
+        <input type="password" id="newPassword" placeholder="Senha" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Telefone" required>
+        
+        <select id="newUserType">
+            <option value="cliente">Cliente</option>
+            <option value="admin">Administrador</option>
+        </select>
+        
+        <button onclick="register()">Registrar</button>
+        <p class="error-message" id="register-error-message"></p>
+        
+        <p>Já tem uma conta? <a href="#" onclick="showLogin()">Faça Login</a></p>
+    </div>
+
+    <script>
+        const users = [
+            { username: 'julia', password: '123', type: 'cliente', email: '', phone: '016991313520' },
+            { username: 'kayky', password: '123', type: 'cliente', email: 'julia@gmail.com', phone: '016992249645' },
+            { username: 'renato', password: '123', type: 'admin', email: 'renato@gmail.com', phone: '016993163527' }
+        ];
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const userType = document.getElementById('userType').value;
+            const errorMessage = document.getElementById('error-message');
+
+            const user = users.find(user => user.username === username && user.password === password && user.type === userType);
+
+            if (user) {
+                window.location.href = userType === 'admin' ? 'Homepage.html' : 'Homepage.html';
+            } else {
+                errorMessage.textContent = 'Usuário, senha ou categoria incorretos.';
+            }
+        }
+
+    </script>
+</body>
+</html>

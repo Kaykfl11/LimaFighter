@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar-se</title>
+    <link rel="stylesheet" href="styleregistro.css">
+</head>
+<body>
+
+    <img src="/public/icones/logo.png" alt="Imagem à esquerda" class="left-image">
+    <div class="container">
+        <div class="register-container">
+            <h2>Registrar-se</h2>
+            <form id="registerForm">
+                <div class="input-row">
+                    <input type="text" id="firstName" placeholder="Nome" required>
+                    <input type="text" id="lastName" placeholder="Sobrenome" required>
+                </div>
+                <div class="input-row">
+                    <input type="tel" id="phone" placeholder="Telefone" required>
+                    <input type="text" id="city" placeholder="Cidade" required>
+                </div>
+                <div class="input-row">
+                    <input type="text" id="cep" placeholder="CEP" maxlength="8" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-row">
+                    <input type="password" id="newPassword" placeholder="Senha" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Registrar</button>
+                </div>
+                <p class="error-message" id="register-error-message"></p>
+                <p class="back-to-login"><a href="/indexlogin.html">Fazer login</a></p>
+            </form>
+        </div>
+    </div>
+
+    
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Usuário registrado com sucesso!');
+        });
+    </script>
+</body>
+</html>

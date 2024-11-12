@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #1c1c1c; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+}
+
+
+h2 {
+    text-align: center;
+    color: #ff0000; 
+    font-weight: bold;
+}
+
+
+.payment-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.payment-options button {
+    padding: 10px 20px;
+    border: 2px solid #ff0000; 
+    background-color: transparent; 
+    color: #ff0000; 
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.payment-options button:hover {
+    background-color: #ff0000; 
+    color: #fff; 
+}
+
+
+.card-info {
+    display: none;
+    margin-top: 20px;
+}
+
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    background: linear-gradient(135deg, #ff0000, #333333); 
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card-number,
+.card-name,
+.card-expiration,
+.card-cvc {
+    margin: 10px 0;
+}
+
+
+.card-cvc {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 12px;
+    color: #ddd;
+}
+
+
+.form-group {
+    margin: 10px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff; 
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ff0000; 
+    border-radius: 5px;
+    outline: none;
+    background-color: #2c2c2c; 
+    color: #fff; 
+}
+
+
+button {
+    padding: 10px;
+    width: 100%;
+    background-color: #ff0000; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #cc0000; 
+    transform: translateY(-2px); 
+}
+
+
+#qrcode img {
+    border: 2px solid #ff0000; 
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.boleto-container {
+    background-color: #2c2c2c; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none; 
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+}
+
+.boleto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+}
+
+.boleto-header h2 {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.boleto-header img {
+    width: 80px;
+}
+
+.linha-digitavel {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dados-boleto {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.dados-boleto p {
+    margin: 5px 0;
+}
+
+.boleto-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boleto-footer .btn-pagar {
+    padding: 10px 20px;
+    background-color: #ff0000; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boleto-footer .btn-pagar:hover {
+    background-color: #cc0000; 
+}
+

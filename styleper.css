@@ -1,0 +1,37 @@
+/* style.css */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+#image-container {
+    position: relative;
+    width: 700px; /* Ajuste conforme necessário */
+    height: 600px;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+}
+
+#background-image {
+    z-index: 1; /* Certifica que o background está por baixo */
+}
+
+#uploaded-image {
+    z-index: 2; /* Mantém o uploaded-image acima do fundo */
+    cursor: move;
+    opacity: 1;
+    transition: opacity 0.3s ease; /* Suaviza transições de opacidade */
+}
+
+#uploaded-image {
+    border: 2px dashed #fff; /* Para ajudar visualmente durante testes */
+    resize: both;
+    max-width: 100%;
+    max-height: 100%;
+}
+

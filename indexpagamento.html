@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="stylepagamento.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-image">
+          <a href="Homepage.html">
+            <img src="public/icones/logo inicial.jpg" alt="Logo Lima Fighter">
+          </a>
+        </div>
+      
+
+<div class="container">
+    <h2>Escolha a forma de pagamento</h2>
+    
+    <div class="payment-options">
+        <button onclick="selectPayment('pix')">PIX</button>
+        <button onclick="selectPayment('boleto')">Boleto</button>
+        <button onclick="selectPayment('card')">Cartão</button>
+    </div>
+    
+    <div id="pix-info" class="payment-info" style="display: none;">
+        <p style="color: white;">Para realizar o pagamento via PIX, escaneie o código QR abaixo:</p>
+        <div id="qrcode">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=chavepix@dominio.com&size=200x200" alt="QR Code PIX">
+        </div>
+        <p style="color: white"id="pix-key" class="pix-key">
+            Chave PIX: <span id="pix-key-value">kaykypix@lima.com</span>
+            <button onclick="copyPixKey()">Copiar Chave</button>
+        </p>
+    </div>
+    
+    <div id="boleto-info" class="payment-info" style="display: none;">
+        <p style="color: white">Para realizar o pagamento via boleto, clique no botão abaixo para gerar o boleto.</p>
+        <button onclick="generateBoleto()">Gerar Boleto</button>
+        <div id="boleto-container" class="boleto-container" style="display: none;">
+            <div class="boleto-header">
+                <h2>Boleto</h2>
+                <img src="public/icones/logo.png" alt="logo empresa">
+            </div>
+            <div class="linha-digitavel">
+                <p>34191.12345 67890.123456 78901.234567 12345.67890 1234 5678 9012</p>
+            </div>
+            <div class="dados-boleto">
+                <p><strong>Vencimento:</strong> <span id="boleto-vencimento">20/11/2024</span></p>
+                <p><strong>Valor:</strong> <span id="boleto-valor">R$ 0,00</span></p>
+                <p><strong>Banco:</strong> Banco Santander</p>
+                <p><strong>Código do Cedente:</strong> 123456789</p>
+            </div>
+            <div class="boleto-footer">
+                <a href="#" class="btn-pagar" onclick="finalizarCompra()">Finalizar Compra</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="card-info" class="card-info">
+        <div class="card">
+            <div class="card-number" id="display-card-number">1234 5678 9012 3456</div>
+            <div class="card-name" id="display-card-name">NOME NO CARTÃO</div>
+            <div class="card-expiration" id="display-card-expiration">MM/AA</div>
+            <div class="card-cvc" id="display-card-cvc">CVC</div>
+        </div>
+        
+        <div class="form-group">
+            <label>Número do Cartão</label>
+            <input type="text" maxlength="16" placeholder="1234 5678 9012 3456" oninput="updateCard('number', this.value)" onkeypress="return limitCardNumber(event)">
+        </div>
+
+        
+        <div class="form-group">
+            <label>Nome no Cartão</label>
+            <input type="text" placeholder="Nome completo" oninput="updateCard('name', this.value)">
+        </div>
+        
+        
+        <div class="form-group">
+            <label>Data de Validade (MM/AA)</label>
+            <input type="text" maxlength="5" placeholder="MM/AA" oninput="updateCard('expiration', this.value)">
+            <div id="expiration-message" style="color: red; display: none;">O cartão está vencido!</div>
+        </div>
+
+        <div class="form-group">
+            <label>CVC</label>
+            <input type="text" maxlength="3" placeholder="123" oninput="updateCard('cvc', this.value)">
+        </div>
+        
+        <button onclick="checkCardFields()">Confirmar Pagamento</button>
+    </div>
+</div>
+
+<script>
+
+function selectPayment(method) {
+    document.getElementById('pix-info').style.display = 'none';
+    document.getElementById('boleto-info').style.display = 'none';
+    document.getElementById('card-info').style.display = 'none';
+    
+    if (method === 'pix') {
+        document.getElementById('pix-info').style.display = 'block';
+    } else if (method === 'boleto') {
+        document.getElementById('boleto-info').style.display = 'block';
+    } else if (method === 'card') {
+        document.getElementById('card-info').style.display = 'block';
+    }
+}
+function generateBoleto() {
+    const boletoValor = 250.00; 
+    document.getElementById('boleto-valor').innerText = 'R$ ' + boletoValor.toFixed(2); 
+    document.getElementById('boleto-container').style.display = 'block'; 
+}
+function finalizarCompra() {
+    alert('Compra finalizada com sucesso!');
+   
+}
+function copyPixKey() {
+    const pixKey = document.getElementById('pix-key-value').textContent;
+    navigator.clipboard.writeText(pixKey).then(function() {
+        alert('Chave PIX copiada para a área de transferência!');
+    }).catch(function(error) {
+        alert('Falha ao copiar chave PIX: ', error);
+    });
+}
+function updateCard(field, value) {
+    if (field === 'number') {
+        document.getElementById('display-card-number').innerText = formatCardNumber(value);
+    } else if (field === 'name') {
+        document.getElementById('display-card-name').innerText = value.toUpperCase();
+    } else if (field === 'expiration') {
+        document.getElementById('display-card-expiration').innerText = value;
+    } else if (field === 'cvc') {
+        document.getElementById('display-card-cvc').innerText = value;
+    }
+}
+
+
+function formatCardNumber(value) {
+    return value.replace(/\D/g, '').replace(/(\d{4})(?=\d)/g, '$1 ');
+}
+
+
+function checkCardFields() {
+    const cardNumber = document.querySelector('input[placeholder="1234 5678 9012 3456"]').value.trim();
+    const cardName = document.querySelector('input[placeholder="Nome completo"]').value.trim();
+    const expirationDate = document.querySelector('input[placeholder="MM/AA"]').value.trim();
+    const cvc = document.querySelector('input[placeholder="123"]').value.trim();
+
+    if (cardNumber === "" || cardName === "" || expirationDate === "" || cvc === "") {
+        alert("Por favor, preencha todos os campos do cartão antes de finalizar a compra.");
+        return;
+    }
+
+    checkCardExpiration(); 
+}
+
+
+function checkCardExpiration() {
+    const expirationDate = document.querySelector('input[placeholder="MM/AA"]').value.trim();
+    const currentDate = new Date();
+    
+    const [month, year] = expirationDate.split('/').map(num => num.trim());
+    
+    if (month && year) {
+        const expYear = parseInt('20' + year); 
+        const expMonth = parseInt(month);
+
+        if (expYear < currentDate.getFullYear() || (expYear === currentDate.getFullYear() && expMonth < currentDate.getMonth() + 1)) {
+            document.getElementById('expiration-message').style.display = 'block'; 
+        } else {
+            document.getElementById('expiration-message').style.display = 'none'; 
+            alert("Pagamento confirmado com sucesso!");
+        }
+    } else {
+        alert("Por favor, insira uma data de validade válida.");
+    }
+}
+</script>
+<footer>
+    <div class="footer-section">
+      <p>&copy; 2024 Lima Fighter. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

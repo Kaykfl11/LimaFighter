@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lima Fighter</title>
+  <link rel="stylesheet" href="cssbase.css">
+  <link rel="stylesheet" href="aparadores.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-image">
+      <a href="Homepage.html">
+        <img src="public/icones/logo inicial.jpg" alt="Logo Lima Fighter">
+      </a>
+    </div>
+    <div class="top-bar">
+        <div class="account-container">
+            <img src="public/icones/account.png" alt="Conta" class="icon account-icon">
+            <div class="dropdown-menu">
+              <a href="/indexlogin.html">Login</a>
+              <a href="/indexregistro.html">Cadastro</a>
+            </div>
+          </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Pesquise um produto, uma cor, uma coleção...">
+            <img src="public/icones/Lupa.png" class="search-icon" width="40px" height="40px">
+          </div>
+        <img src="public/icones/carrinho.jpg" alt="Carrinho" class="icon cart-icon">
+        <div id="notification" class="notification">+1 item adicionado ao carrinho</div>
+
+<!-- Contêiner para mostrar os itens do carrinho ao passar o mouse -->
+<div id="cart-items-list" class="cart-items-list"></div>
+      </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+        <ul class="sidebar-categorias">
+            <li><a href="aparadores.html">Aparadores de Chute</a></li>
+            <li><a href="bolsas.html">Bolsas de Treino</a></li>
+            <li><a href="caneleiras.html">Caneleiras</a></li>
+            <li><a href="kits.html">Kits</a></li>
+            <li><a href="luvas.html">Luvas</a></li>
+            <li><a href="manoplas.html">Manoplas</a></li>
+            <li><a href="protetores.html">Protetores</a></li>
+            <li><a href="Raquetes.html">Raquetes</a></li>
+            <li><a href="sacos.html">Sacos de Pancada</a></li>
+            <li><a href="patrocinio.html">Patrocínio</a></li>
+            <li><a href="personalizado.html">Personalização</a></li>
+        </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+
+    <section id="aparadores-chute">
+      <h2>Aparadores de Chute</h2>
+      <div class="filtros">
+          <label for="filtro-preco">Filtrar por Preço:</label>
+          <select id="filtro-preco">
+              <option value="todos">Todos</option>
+              <option value="baixo">Até R$ 150</option>
+              <option value="medio">R$ 150 Até R$ 250</option>
+              <option value="alto">Acima de R$ 250</option>
+          </select>
+      </div>
+      <div class="kit-grid">
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (1).jpg" alt="Aparador 1">
+              <h3>Aparador de 1 alça Básico Vermelho</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador1')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (2).jpg" alt="Aparador 2">
+              <h3>Aparador de 1 alça Básico Dourado</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador2')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (3).jpg" alt="Aparador 3">
+              <h3>Aparador de 1 alça Básico Roxo</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador3')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="299.99">
+              <img src="public/imgs/ap (4).jpg" alt="ADICIONAR">
+              <h3>Aparador de 1 alça Básico Azul</h3>
+              <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador4')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (5).jpg" alt="Aparador 5">
+              <h3>Aparador de 1 alça Básico Branco</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador5')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (6).jpg" alt="Aparador 6">
+              <h3>Aparador de 2 alças Intermediário Azul</h3>
+              <p>Material resistente a socos, joelhadas e chutes, ideal para treinos de iniciantes e profissionais.</p>
+              <span class="preco">R$ 282,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador6')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (7).jpg" alt="Aparador 7">
+              <h3>Aparador de 2 alças Intermediário Vermelho</h3>
+              <p>Material resistente a socos, joelhadas e chutes, ideal para treinos de iniciantes e profissionais.</p>
+              <span class="preco">R$ 282,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador7')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (8).jpg" alt="Aparador 8">
+              <h3>Thai Pad Profissional Modelo Tailandês Vermelho</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador8')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (9).jpg" alt="Aparador 9">
+              <h3>Thai Pad Profissional Modelo Tailandês Samurai</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador9')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (10).jpg" alt="Aparador 10">
+              <h3>Aparador de 1 alça Básico Dragão</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador10')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (11).jpg" alt="Aparador 11">
+              <h3>Thai Pad Profissional Modelo Tailandês Azul</h3>
+              <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador11')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (12).jpg" alt="Aparador 12">
+              <h3>Thai Pad Profissional Modelo Tailandês Verde</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador12')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (13).jpg" alt="Aparador 13">
+              <h3>Escudo de Chute Intermediário Preto</h3>
+              <p>Equipamento resistente para treinos de chutes e joelhadas. Material utilizado em treinos avançados e iniciais.  </p>
+              <span class="preco">R$ 366,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador13')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (14).jpg" alt="Aparador 14">
+              <h3>Almofadão de Chute Básico Azul</h3>
+              <p>Equipamento macio para treinos de chutes e joelhadas. Muito utilizado em treinos de iniciantes.</p>
+              <span class="preco">R$ 271,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador14')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="179.99">
+              <img src="public/imgs/ap (15).jpg" alt="ADICIONAR">
+              <h3>Almofadão de Chute Básico Preto</h3>
+              <p>Equipamento macio para treinos de chutes e joelhadas. Muito utilizado em treinos de iniciantes.</p>
+              <span class="preco">R$ 271,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador15')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="199.99">
+              <img src="public/imgs/ap (16).jpg" alt="ADICIONAR">
+              <h3>Almofadão de Chute Básico Vermelho</h3>
+              <p>Equipamento macio para treinos de chutes e joelhadas. Muito utilizado em treinos de iniciantes.</p>
+              <span class="preco">R$ 271,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador16')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="219.99">
+              <img src="public/imgs/ap (17).jpeg" alt="ADICIONAR">
+              <h3>Thai Pad Profissional Modelo Tailandês Preto</h3>
+              <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador17')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (18).jpeg" alt="Aparador 18">
+              <h3>Thai Pad Profissional Modelo Tailandês Vermelho</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador18')">Comprar</button>
+          </div>
+
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (20).jpg" alt="Aparador 20">
+              <h3>Thai Pad Profissional Modelo Tailandês Preto</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador20')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (21).jpg" alt="Aparador 21">
+              <h3>Thai Pad Profissional Modelo Tailandês Vermelho</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador21')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (22).jpg" alt="Aparador 22">
+              <h3>Thai Pad Profissional Modelo Tailandês Dragão</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador22')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (23).jpg" alt="Aparador 23">
+              <h3>Aparador de 1 alça Básico Azul</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador23')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (24).jpg" alt="Aparador 24">
+              <h3>Aparador de 1 alça Básico Preto</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador24')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (25).jpg" alt="Aparador 25">
+              <h3>Aparador de 1 alça Básico Vermelho</h3>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador25')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (26).jpg" alt="Aparador 26">
+              <h3>Aparador de 1 alça Básico Cinza</h3>
+              <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+              <p>Equipamento mais macio e leve, ideal para treinos de iniciantes.</p>
+              <span class="preco">R$ 240,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador26')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (27).jpeg" alt="Aparador 27">
+              <h3>Thai Pad Profissional Modelo Tailandês Preto</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador27')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (28).jpg" alt="Aparador 28">
+              <h3>Thai Pad Profissional Modelo Tailandês Rosa</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 395,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador28')">Comprar</button>
+          </div>
+          <div class="kit-item" data-preco="ADICIONAR">
+              <img src="public/imgs/ap (29).jpg" alt="Aparador 29">
+              <h3>Thai Pad Profissional Modelo Tailandês Couro</h3>
+              <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+              <span class="preco">R$ 595,00</span>
+              <div class="avaliacoes">
+                  <span class="estrela" data-valor="1">★</span>
+                  <span class="estrela" data-valor="2">★</span>
+                  <span class="estrela" data-valor="3">★</span>
+                  <span class="estrela" data-valor="4">★</span>
+                  <span class="estrela" data-valor="5">★</span>
+                  <span class="nota" style="display: none;"></span>
+              </div>
+              <button onclick="abrirModal('aparador29')">Comprar</button>
+          </div>
+
+          
+          <script>
+              function abrirModal(aparador) {
+                  const modal = document.getElementById('modal');
+                  const titulo = document.getElementById('modal-titulo');
+                  const descricao = document.getElementById('modal-descricao');
+          
+                  switch (aparador) {
+                      case 'aparador1':
+                          titulo.textContent = 'Aparador Pro 3000';
+                          descricao.textContent = 'Ideal para treinos intensos, resistência e durabilidade.';
+                          break;
+                      case 'aparador2':
+                          titulo.textContent = 'Aparador Ultra Light';
+                          descricao.textContent = 'Leve e fácil de manusear, perfeito para iniciantes.';
+                          break;
+                      case 'aparador3':
+                          titulo.textContent = 'Aparador Max Grip';
+                          descricao.textContent = 'Com tecnologia de absorção de impacto, ideal para sparring.';
+                          break;
+                      case 'aparador4':
+                          titulo.textContent = 'Aparador Elite 5000';
+                          descricao.textContent = 'Alta performance para atletas profissionais.';
+                          break;
+                  }
+          
+                  modal.style.display = "block";
+              }
+          
+              function fecharModal() {
+                  document.getElementById('modal').style.display = "none";
+              }
+          
+              // Fecha o modal ao clicar fora dele
+              window.onclick = function(event) {
+                  const modal = document.getElementById('modal');
+                  if (event.target == modal) {
+                      fecharModal();
+                  }
+              }
+          
+
+              document.querySelectorAll('.estrela').forEach(star => {
+                  star.addEventListener('click', function() {
+                      const rating = this.getAttribute('data-valor');
+          
+                      
+                      document.querySelectorAll('.estrela').forEach(s => {
+                          s.classList.remove('ativa');
+                          if (s.getAttribute('data-valor') <= rating) {
+                              s.classList.add('ativa');
+                          }
+                      });
+          
+                      this.parentNode.querySelector('.nota').textContent = `Você avaliou com ${rating} estrela(s)`;
+                      this.parentNode.querySelector('.nota').style.display = 'block';
+                  });
+              });
+          </script>
+   
+      
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <p>&copy; 2024 Lima Fighter. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

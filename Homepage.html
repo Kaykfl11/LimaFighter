@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lima Fighter</title>
+  <link rel="stylesheet" href="cssbase.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-image">
+      <a href="Homepage.html">
+        <img src="public/icones/logo inicial.jpg" alt="Logo Lima Fighter">
+      </a>
+    </div>
+    <div class="top-bar">
+      <div class="account-container">
+        <img src="public/icones/account.png" alt="Conta" class="icon account-icon">
+        <div class="dropdown-menu">
+          <a href="/indexlogin.html">Login</a>
+          <a href="/indexregistro.html">Cadastro</a>
+        </div>
+      </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Pesquise um produto, uma cor, uma coleção...">
+            <img src="public/icones/Lupa.png" class="search-icon" width="40px" height="40px">
+          </div>
+        <img src="public/icones/carrinho.jpg" alt="Carrinho" class="icon cart-icon">
+        <div id="notification" class="notification">+1 item adicionado ao carrinho</div>
+
+<!-- Contêiner para mostrar os itens do carrinho ao passar o mouse -->
+<div id="cart-items-list" class="cart-items-list"></div>
+      </div>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <nav>
+        <ul class="sidebar-categorias">
+            <li><a href="aparadores.html">Aparadores de Chute</a></li>
+            <li><a href="bolsas.html">Bolsas de Treino</a></li>
+            <li><a href="caneleiras.html">Caneleiras</a></li>
+            <li><a href="kits.html">Kits</a></li>
+            <li><a href="luvas.html">Luvas</a></li>
+            <li><a href="manoplas.html">Manoplas</a></li>
+            <li><a href="protetores.html">Protetores</a></li>
+            <li><a href="Raquetes.html">Raquetes</a></li>
+            <li><a href="sacos.html">Sacos de Pancada</a></li>
+            <li><a href="patrocinio.html">Patrocínio</a></li>
+            <li><a href="personalizado.html">Personalização</a></li>
+        </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <div class="carousel-wrapper">
+        <h2 class="carousel-title">Nossos novos lançamentos!</h2>
+    <div class="carousel-container">
+        <div class="carousel">
+          <img src="public/imgs/banner samurai.jpg" alt="Imagem 1" class="carousel-image">
+          <img src="public/imgs/banner samurai1.jpg" alt="Imagem 2" class="carousel-image">
+          <img src="public/imgs/banner samurai2.jpg" alt="Imagem 3" class="carousel-image">
+          <img src="public/imgs/banner samurai3.jpg" alt="Imagem 4" class="carousel-image">
+          <img src="public/imgs/banner samurai4.jpg" alt="Imagem 5" class="carousel-image">
+        </div>
+        <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+
+    <h2>Os mais vendidos!</h2>
+    <div class="kit-grid">
+        <div class="kit-item" data-preco="ADICIONAR">
+            <img src="public/imgs/kithomepage.jpg" alt="kit 1">
+            <h3>Kit Luva + Caneleira + Bandagem + Protetor Bucal</h3>
+            <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+            <p>Kit para iniciantes com o equipamento necessário para se proteger!</p>
+            <span class="preco">R$ 469,00</span>
+            <div class="avaliacoes">
+                <span class="estrela" data-valor="1">★</span>
+                <span class="estrela" data-valor="2">★</span>
+                <span class="estrela" data-valor="3">★</span>
+                <span class="estrela" data-valor="4">★</span>
+                <span class="estrela" data-valor="5">★</span>
+                <span class="nota" style="display: none;"></span>
+            </div>
+            <button onclick="abrirModal('kithome')">Comprar</button>
+        </div>
+        <div class="kit-item" data-preco="ADICIONAR">
+            <img src="public/imgs/thpdhomepage.jpg" alt="kit 2">
+            <h3>Thai Pad Curvo Profissional Modelo Tailandês</h3>
+            <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+            <p>Ideal para treinos de socos, chutes e joelhadas. Equipamento robusto e resistente para treinos avançados.</p>
+            <span class="preco">R$ 395,00</span>
+            <div class="avaliacoes">
+                <span class="estrela" data-valor="1">★</span>
+                <span class="estrela" data-valor="2">★</span>
+                <span class="estrela" data-valor="3">★</span>
+                <span class="estrela" data-valor="4">★</span>
+                <span class="estrela" data-valor="5">★</span>
+                <span class="nota" style="display: none;"></span>
+            </div>
+            <button onclick="abrirModal('kit 2')">Comprar</button>
+        </div>
+        <div class="kit-item" data-preco="ADICIONAR">
+            <img src="public/imgs/manhomepage.jpg" alt="kit 3">
+            <h3>Manopla de Soco Pequena Sem Tampa</h3>
+            <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+            <p>Para treinos de movimentação rápida de socos e cotoveladas, destinadas tanto a profissionais quanto a iniciantes.</p>
+            <span class="preco">R$ 147,99</span>
+            <div class="avaliacoes">
+                <span class="estrela" data-valor="1">★</span>
+                <span class="estrela" data-valor="2">★</span>
+                <span class="estrela" data-valor="3">★</span>
+                <span class="estrela" data-valor="4">★</span>
+                <span class="estrela" data-valor="5">★</span>
+                <span class="nota" style="display: none;"></span>
+            </div>
+            <button onclick="abrirModal('kit 3')">Comprar</button>
+        </div>
+        <div class="kit-item" data-preco="ADICIONAR">
+            <img src="public/imgs/prtxhomepage.jpg" alt="kit 4">
+            <h3>Protetor de Coxa Profissional</h3>
+            <p class="text-price">FRETE GRÁTIS - SÃO PAULO</p>
+            <p>Ideal para treinos de low kicks, pois absorve os impactos, evitando lesões e aumentando o rendimento. Confortável e com ajuste.</p>
+            <span class="preco">R$ 628,99</span>
+            <div class="avaliacoes">
+                <span class="estrela" data-valor="1">★</span>
+                <span class="estrela" data-valor="2">★</span>
+                <span class="estrela" data-valor="3">★</span>
+                <span class="estrela" data-valor="4">★</span>
+                <span class="estrela" data-valor="5">★</span>
+                <span class="nota" style="display: none;"></span>
+            </div>
+            <button onclick="abrirModal('kit 4')">Comprar</button>
+        </div>
+
+   
+      
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <h3>Contato</h3>
+      <p>Quem somos</p>
+      <p>Email: limafighter@gmail.com </p>
+      <p>Telefone: (16) 99628-6963</p>
+    </div>
+    <div class="footer-section">
+      <h3>Institucional</h3>
+      <p>Política de Privacidade</p>
+      <p>Termos de Serviço</p>
+    </div>
+    <div class="footer-section">
+      <h3>Redes Sociais</h3>
+      <p>Facebook</p>
+      <p>Youtube</p>
+      <p>Instagram</p>
+    </div>
+    
+  </footer>
+
+  <script src="homepage.js"></script>
+</body>
+</html>

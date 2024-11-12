@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lima Fighter</title>
+  <link rel="stylesheet" href="cssbase.css">
+  <link rel="stylesheet" href="stylepatrocinador.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-image">
+      <a href="Homepage.html">
+        <img src="public/icones/logo inicial.jpg" alt="Logo Lima Fighter">
+      </a>
+    </div>
+    <div class="top-bar">
+      <div class="account-container">
+        <img src="public/icones/account.png" alt="Conta" class="icon account-icon">
+        <div class="dropdown-menu">
+          <a href="/indexlogin.html">Login</a>
+          <a href="/indexregistro.html">Cadastro</a>
+        </div>
+      </div>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Pesquise um produto, uma cor, uma coleção...">
+            <img src="public/icones/Lupa.png" class="search-icon" width="40px" height="40px">
+          </div>
+        <img src="public/icones/carrinho.jpg" alt="Carrinho" class="icon cart-icon">
+      </div>
+  </header>
+
+
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <h1>Seja Patrocinado pela Nossa Loja!</h1>
+      <p>Para ser considerado para patrocínio pela nossa loja, você deve atender aos seguintes requisitos:</p>
+  
+  <ul>
+    <li><strong>Ser Cliente Fiel:</strong> Valorizar nossos produtos e ser um cliente ativo, com um histórico de compras na loja.</li>
+    
+    <li><strong>Postar Fotos Regularmente:</strong> Compartilhar fotos usando nossos produtos nas redes sociais, marcando nossa loja e utilizando as hashtags oficiais.</li>
+    
+    <li><strong>Ter uma Presença Digital Ativa:</strong> Ter uma boa base de seguidores em redes sociais e engajamento com o público.</li>
+    
+    <li><strong>Criar Conteúdo de Qualidade:</strong> Postar fotos e vídeos com boa qualidade, destacando os produtos de forma positiva.</li>
+  </ul>
+      <button class="cta-button" onclick="becomeSponsor()">Quero Ser Patrocinador!</button>
+      
+    
+      <div class="contact-message" id="contactMessage">
+          <p>Entre em contato com a gente:</p>
+          <div class="social-links">
+              <a href="https://wa.me/+5516996286963" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon">
+              </a>
+              <a href="https://facebook.com/COLOCA O Facebook" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="icon">
+              </a>
+              <a href="https://instagram.com/SEU_COLOCA O INSTAGRAM" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="icon">
+              </a>
+          </div>
+      </div>
+  </div>
+
+  
+  <div id="confettiContainer"></div>
+
+  <script>
+      function becomeSponsor() {
+          const contactMessage = document.getElementById("contactMessage");
+          contactMessage.style.display = "block";
+          
+          // mais confetes 
+          createConfetti();
+      }
+
+      function createConfetti() {
+          const confettiContainer = document.getElementById("confettiContainer");
+
+          for (let i = 0; i < 30; i++) {
+              // Cria o confete
+              const confetti = document.createElement("div");
+              confetti.classList.add("confetti");
+
+           
+              const colors = ["#ff0000", "#FFD700", "#FFFFFF", "#000000"];
+              confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+              // Posiciona no topo
+              confetti.style.left = Math.random() * 100 + "vw";
+              confetti.style.animationDuration = Math.random() * 2 + 3 + "s"; 
+
+              confettiContainer.appendChild(confetti);
+
+              // Remove o confete após a animação terminar
+              confetti.addEventListener("animationend", () => {
+                  confetti.remove();
+              });
+          }
+      }
+  </script>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-section">
+      <p>&copy; 2024 Lima Fighter. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="homepage.js"></script>
+</body>
+</html>
